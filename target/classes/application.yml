@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /msprueba
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SGPNOVA
+    password: Telcel01#
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
